@@ -1,0 +1,143 @@
+﻿@model Audit_Mvc_Core.Models.Company
+
+@{
+    ViewData["Title"] = "CompanyRegistration";
+    Layout = "~/Views/Shared/_CompanyLayout.cshtml";
+}
+
+<h1>CompanyRegistration</h1>
+
+<h4>Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CompanyRegistration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CmpName" class="control-label"></label>
+                <input asp-for="CmpName" class="form-control" />
+                <span asp-validation-for="CmpName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpType" class="control-label"></label>
+                <input asp-for="CmpType" class="form-control" />
+                <span asp-validation-for="CmpType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpGstNo" class="control-label"></label>
+                <input asp-for="CmpGstNo" class="form-control" />
+                <span asp-validation-for="CmpGstNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpPanNo" class="control-label"></label>
+                <input asp-for="CmpPanNo" class="form-control" />
+                <span asp-validation-for="CmpPanNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpLicenceNo" class="control-label"></label>
+                <input asp-for="CmpLicenceNo" class="form-control" />
+                <span asp-validation-for="CmpLicenceNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpPropreitorFirstName" class="control-label"></label>
+                <input asp-for="CmpPropreitorFirstName" class="form-control" />
+                <span asp-validation-for="CmpPropreitorFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpPropreitorLastName" class="control-label"></label>
+                <input asp-for="CmpPropreitorLastName" class="form-control" />
+                <span asp-validation-for="CmpPropreitorLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpGstAddress" class="control-label"></label>
+                <input asp-for="CmpGstAddress" class="form-control" />
+                <span asp-validation-for="CmpGstAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpGstState" class="control-label"></label>
+                <input asp-for="CmpGstState" class="form-control" />
+                <span asp-validation-for="CmpGstState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpGstCity" class="control-label"></label>
+                <input asp-for="CmpGstCity" class="form-control" />
+                <span asp-validation-for="CmpGstCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpZip" class="control-label"></label>
+                <input asp-for="CmpZip" class="form-control" />
+                <span asp-validation-for="CmpZip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpCompanyAddress" class="control-label"></label>
+                <input asp-for="CmpCompanyAddress" class="form-control" />
+                <span asp-validation-for="CmpCompanyAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpCompanyState" class="control-label"></label>
+                <input asp-for="CmpCompanyState" class="form-control" />
+                <span asp-validation-for="CmpCompanyState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpCompanyCity" class="control-label"></label>
+                <input asp-for="CmpCompanyCity" class="form-control" />
+                <span asp-validation-for="CmpCompanyCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpZipCode" class="control-label"></label>
+                <input asp-for="CmpZipCode" class="form-control" />
+                <span asp-validation-for="CmpZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpBankName" class="control-label"></label>
+                <input asp-for="CmpBankName" class="form-control" />
+                <span asp-validation-for="CmpBankName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpBankBranch" class="control-label"></label>
+                <input asp-for="CmpBankBranch" class="form-control" />
+                <span asp-validation-for="CmpBankBranch" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpBankAccno" class="control-label"></label>
+                <input asp-for="CmpBankAccno" class="form-control" />
+                <span asp-validation-for="CmpBankAccno" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpIfscCode" class="control-label"></label>
+                <input asp-for="CmpIfscCode" class="form-control" />
+                <span asp-validation-for="CmpIfscCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpBankChequePhoto" class="control-label"></label>
+                <input asp-for="CmpBankChequePhoto" class="form-control" />
+                <span asp-validation-for="CmpBankChequePhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpLandline" class="control-label"></label>
+                <input asp-for="CmpLandline" class="form-control" />
+                <span asp-validation-for="CmpLandline" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpDoc" class="control-label"></label>
+                <input asp-for="CmpDoc" class="form-control" />
+                <span asp-validation-for="CmpDoc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CmpRegisteredBy" class="control-label"></label>
+                <select asp-for="CmpRegisteredBy" class ="form-control" asp-items="ViewBag.CmpRegisteredBy"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

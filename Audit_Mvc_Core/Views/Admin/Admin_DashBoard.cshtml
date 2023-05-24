@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewData["Title"] = "Admin_DashBoard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-header">Employees count</div>
+            <div class="card-body">@ViewBag.CountofEmp</div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">View</button>
+                @Html.ActionLink("ViewDetails", "Index", "Employee");
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-header">Customers Count</div>
+            <div class="card-body">@ViewBag.CountofCust</div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">View</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-header">Total Companies</div>
+            <div class="card-body">@ViewBag.CountofCmp</div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">View</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-header">Total Tasks</div>
+            <div class="card-body"></div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mymodal">View</button>
+            </div>
+        </div>
+    </div> 
+    <div class="col-lg-12">
+        <div class="card" id="Analysis">
+            <div class="card-header">Analysis</div>
+            <div class="card-body"></div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary">View</button>
+            </div>
+        </div>
+    </div>                   
+</div>
+
+<div class="modal" id="mymodal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>primary button popup</h4>
+                <button type="button" data-bs-dismiss="close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>modal1</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-bs-dismiss="modal" class="close">close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+        function createModal(url)
+        {
+            debugger;
+            $.ajax
+            ({
+                type: "GET",
+                url: url,
+                success: function (response) 
+                {
+                    $("#modalContent").html(response);
+                    $("#myModal").modal("show");
+                },
+                failure: function (response) 
+                {
+                    alert(response.responseText);
+                },
+                error: function (response)
+                {
+                    alert(response.responseText);
+                }
+            });
+        }
+    </script>
+}

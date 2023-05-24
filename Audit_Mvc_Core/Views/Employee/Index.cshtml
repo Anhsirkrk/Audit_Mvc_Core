@@ -1,0 +1,168 @@
+﻿@model IEnumerable<Audit_Mvc_Core.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpFirstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpLastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpDepartment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpDesignation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpMobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpEmailid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpProfilepic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpBankName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpBankBranch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpBankAccno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpIfscCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpPanNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpDob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpDoj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpQualificationDoc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpFirstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpLastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpUsername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpDepartment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpDesignation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpMobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpEmailid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpProfilepic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpBankName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpBankBranch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpBankAccno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpIfscCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpPanNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpDob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpDoj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpQualificationDoc)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.EmpId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

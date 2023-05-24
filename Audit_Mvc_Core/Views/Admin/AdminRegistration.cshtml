@@ -1,0 +1,112 @@
+﻿@model Audit_Mvc_Core.Models.Admin
+
+@{
+    ViewData["Title"] = "AdminRegistration";
+    Layout = "~/Views/Shared/_RegLayout.cshtml";
+}
+
+<h1>AdminRegistration</h1>
+
+<h4>Admin</h4>
+<hr />
+<div class="card" id="Box">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AdminRegistration" class="form-inline">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="AdminFirstname" class="control-label"></label>
+                    <input asp-for="AdminFirstname" class="form-control" />
+                    <span asp-validation-for="AdminFirstname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminLastname" class="control-label"></label>
+                    <input asp-for="AdminLastname" class="form-control" />
+                    <span asp-validation-for="AdminLastname" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminGender" class="control-label"></label>
+                    <input asp-for="AdminGender" class="form-control" />
+                    <span asp-validation-for="AdminGender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminUsername" class="control-label"></label>
+                    <input asp-for="AdminUsername" class="form-control" />
+                    <span asp-validation-for="AdminUsername" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminPassword" class="control-label"></label>
+                    <input asp-for="AdminPassword" class="form-control" />
+                    <span asp-validation-for="AdminPassword" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminMobileNo" class="control-label"></label>
+                    <input asp-for="AdminMobileNo" class="form-control" />
+                    <span asp-validation-for="AdminMobileNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminEmailid" class="control-label"></label>
+                    <input asp-for="AdminEmailid" class="form-control" />
+                    <span asp-validation-for="AdminEmailid" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminLicenceNo" class="control-label"></label>
+                    <input asp-for="AdminLicenceNo" class="form-control" />
+                    <span asp-validation-for="AdminLicenceNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminProfilepic" class="control-label"></label>
+                    <input asp-for="AdminProfilepic" class="form-control" />
+                    <span asp-validation-for="AdminProfilepic" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminBankName" class="control-label"></label>
+                    <input asp-for="AdminBankName" class="form-control" />
+                    <span asp-validation-for="AdminBankName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminBankAccno" class="control-label"></label>
+                    <input asp-for="AdminBankAccno" class="form-control" />
+                    <span asp-validation-for="AdminBankAccno" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminIfscCode" class="control-label"></label>
+                    <input asp-for="AdminIfscCode" class="form-control" />
+                    <span asp-validation-for="AdminIfscCode" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminPanNo" class="control-label"></label>
+                    <input asp-for="AdminPanNo" class="form-control" />
+                    <span asp-validation-for="AdminPanNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminState" class="control-label"></label>
+                    <input asp-for="AdminState" class="form-control" />
+                    <span asp-validation-for="AdminState" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminCity" class="control-label"></label>
+                    <input asp-for="AdminCity" class="form-control" />
+                    <span asp-validation-for="AdminCity" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdminDob" class="control-label"></label>
+                    <input asp-for="AdminDob" class="form-control" />
+                    <span asp-validation-for="AdminDob" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

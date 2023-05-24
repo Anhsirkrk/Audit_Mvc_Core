@@ -1,0 +1,168 @@
+﻿@model IEnumerable<Audit_Mvc_Core.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_CompanyLayout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpGstNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpPanNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpLicenceNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpPropreitorFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpPropreitorLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpGstAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpGstState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpGstCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpZip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpCompanyAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpCompanyState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpCompanyCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpBankName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpBankBranch)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpBankAccno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpIfscCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpBankChequePhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpLandline)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpDoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CmpRegisteredByNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpGstNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpPanNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpLicenceNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpPropreitorFirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpPropreitorLastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpGstAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpGstState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpGstCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpZip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpCompanyAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpCompanyState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpCompanyCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpBankName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpBankBranch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpBankAccno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpIfscCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpBankChequePhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpLandline)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpDoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CmpRegisteredByNavigation.CustomerId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CmpId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CmpId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CmpId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

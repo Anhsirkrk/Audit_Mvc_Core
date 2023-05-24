@@ -1,0 +1,215 @@
+﻿@model Audit_Mvc_Core.Models.Customer
+
+@{
+    ViewData["Title"] = "CustRegistration";
+    Layout = "~/Views/Shared/_RegLayout.cshtml";
+}
+
+
+<div class="card">
+    <div id="heading"><h3>Customer Registration</h3></div>
+        <div class="container-fluid">      
+            <form asp-action="CustRegistration">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div><label id="CustId" class="control-label"> Customer-Id:@ViewBag.Id</label></div>
+                    <div class="col-md-4">
+                    <div class="form-group">                        
+                        <label asp-for="CustFirstname" class="control-label"></label>
+                        <input asp-for="CustFirstname" class="form-control" />
+                        <span asp-validation-for="CustFirstname" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustLastname" class="control-label"></label>
+                        <input asp-for="CustLastname" class="form-control" />
+                        <span asp-validation-for="CustLastname" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustUsername" class="control-label"></label>
+                        <input asp-for="CustUsername" class="form-control" />
+                        <span asp-validation-for="CustUsername" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustPassword" class="control-label"></label>
+                        <input asp-for="CustPassword" class="form-control" />
+                        <span asp-validation-for="CustPassword" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustState" class="control-label"></label>
+                        <input asp-for="CustState" class="form-control" />
+                        <span asp-validation-for="CustState" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustCity" class="control-label"></label>
+                        <input asp-for="CustCity" class="form-control" />
+                        <span asp-validation-for="CustCity" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustAddress" class="control-label"></label>
+                        <input asp-for="CustAddress" class="form-control" />
+                        <span asp-validation-for="CustAddress" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustZipCode" class="control-label"></label>
+                        <input asp-for="CustZipCode" class="form-control" />
+                        <span asp-validation-for="CustZipCode" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustCompanyName" class="control-label"></label>
+                        <input asp-for="CustCompanyName" class="form-control" />
+                        <span asp-validation-for="CustCompanyName" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustDeisgnation" class="control-label"></label>
+                        <input asp-for="CustDeisgnation" class="form-control" />
+                        <span asp-validation-for="CustDeisgnation" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustReferenceId" class="control-label"></label>
+                        <input asp-for="CustReferenceId" class="form-control" />
+                        <span asp-validation-for="CustReferenceId" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustMobileNo" class="control-label"></label>
+                        <input asp-for="CustMobileNo" class="form-control" />
+                        <span asp-validation-for="CustMobileNo" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustEmailid" class="control-label"></label>
+                        <input asp-for="CustEmailid" class="form-control" />
+                        <span asp-validation-for="CustEmailid" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="CustProfilepic" class="control-label"></label>
+                        <input asp-for="CustProfilepic" class="form-control" />
+                        <span asp-validation-for="CustProfilepic" class="text-danger"></span>
+                    </div>
+                </div>
+                    <div class="col-lg-12">
+                    <div class="form-group">
+                        <input id="Button" type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </div>
+                    <br />
+                <div>
+                    <a href="@Url.Action("Login","Login")">Back to List</a>
+                </div>             
+                </div>  
+            </form>
+        </div>
+</div>
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CustRegistration">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                 <label id="CustId" class="control-label">@ViewBag.Id</label>
+                <label asp-for="CustFirstname" class="control-label"></label>
+                <input asp-for="CustFirstname" class="form-control" />
+                <span asp-validation-for="CustFirstname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustLastname" class="control-label"></label>
+                <input asp-for="CustLastname" class="form-control" />
+                <span asp-validation-for="CustLastname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustUsername" class="control-label"></label>
+                <input asp-for="CustUsername" class="form-control" />
+                <span asp-validation-for="CustUsername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustPassword" class="control-label"></label>
+                <input asp-for="CustPassword" class="form-control" />
+                <span asp-validation-for="CustPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustState" class="control-label"></label>
+                <input asp-for="CustState" class="form-control" />
+                <span asp-validation-for="CustState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustCity" class="control-label"></label>
+                <input asp-for="CustCity" class="form-control" />
+                <span asp-validation-for="CustCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustAddress" class="control-label"></label>
+                <input asp-for="CustAddress" class="form-control" />
+                <span asp-validation-for="CustAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustZipCode" class="control-label"></label>
+                <input asp-for="CustZipCode" class="form-control" />
+                <span asp-validation-for="CustZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustCompanyName" class="control-label"></label>
+                <input asp-for="CustCompanyName" class="form-control" />
+                <span asp-validation-for="CustCompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustDeisgnation" class="control-label"></label>
+                <input asp-for="CustDeisgnation" class="form-control" />
+                <span asp-validation-for="CustDeisgnation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustReferenceId" class="control-label"></label>
+                <input asp-for="CustReferenceId" class="form-control" />
+                <span asp-validation-for="CustReferenceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustMobileNo" class="control-label"></label>
+                <input asp-for="CustMobileNo" class="form-control" />
+                <span asp-validation-for="CustMobileNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CustEmailid" class="control-label"></label>
+                <input asp-for="CustEmailid" class="form-control" />
+                <span asp-validation-for="CustEmailid" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <label asp-for="CustDob" class="control-label"></label>
+                <input asp-for="CustDob" class="form-control" />
+                <span asp-validation-for="CustDob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

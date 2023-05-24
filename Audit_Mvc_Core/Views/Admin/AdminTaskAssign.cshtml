@@ -1,0 +1,111 @@
+﻿@model Audit_Mvc_Core.Models.AdminTaskAssign
+
+@{
+    ViewData["Title"] = "AdminTaskAssign";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>AdminTaskAssign</h4>
+<hr />
+
+<form asp-action="AdminTaskAssign">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="TaskId" class="control-label"></label>
+                    <select asp-for="TaskId" class="form-control" asp-items="ViewBag.TaskId"></select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="CompanyId" class="control-label"></label>
+                    <select asp-for="CompanyId" class="form-control" asp-items="ViewBag.CompanyId"></select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Points" class="control-label"></label>
+                    <input asp-for="Points" class="form-control" />
+                    <span asp-validation-for="Points" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="CompletionDate" class="control-label"></label>
+                    <input asp-for="CompletionDate" class="form-control" />
+                    <span asp-validation-for="CompletionDate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Priority" class="control-label"></label>
+                    <input asp-for="Priority" class="form-control" />
+                    <span asp-validation-for="Priority" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="AssignedBy" class="control-label"></label>
+                    <select asp-for="AssignedBy" class="form-control" asp-items="ViewBag.AssignedBy"></select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="AssignedTo" class="control-label"></label>
+                    <select asp-for="AssignedTo" class="form-control" asp-items="@ViewBag.emp"></select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="CustomerId" class="control-label"></label>
+                    <select asp-for="CustomerId" class="form-control" asp-items="@ViewBag.cust"></select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Comments" class="control-label"></label>
+                    <input asp-for="Comments" class="form-control" />
+                    <span asp-validation-for="Comments" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Remarks" class="control-label"></label>
+                    <input asp-for="Remarks" class="form-control" />
+                    <span asp-validation-for="Remarks" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" style="display:flex;float:right" value="Create" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="col-md-4">
+        
+            
+           
+            
+          
+
+           
+          
+          
+          
+           
+            
+      
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

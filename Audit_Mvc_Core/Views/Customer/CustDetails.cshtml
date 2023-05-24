@@ -1,0 +1,126 @@
+﻿@model IEnumerable<Audit_Mvc_Core.Models.Customer>
+
+@{
+    ViewData["Title"] = "CustDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1 style="color:snow">CustDetails</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CustFirstname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustLastname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustUsername)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustGender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustState)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustCity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustZipCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustCompanyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustDeisgnation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustReferenceId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustMobileNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustEmailid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustProfilepic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustDob)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustFirstname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustLastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustUsername)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustGender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustState)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustCity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustZipCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustCompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustDeisgnation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustReferenceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustMobileNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustEmailid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustProfilepic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustDob)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
