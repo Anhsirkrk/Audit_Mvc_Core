@@ -37,7 +37,7 @@ namespace Audit_Mvc_Core.Controllers
         {
             if(ModelState.IsValid)
             {
-                var item =await _icr.CompanyRegistration(cmp);
+                await _icr.CompanyRegistration(cmp);
                 return RedirectToAction("Index");
             }
             return View(cmp);

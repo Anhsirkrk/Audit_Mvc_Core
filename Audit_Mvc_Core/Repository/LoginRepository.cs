@@ -10,14 +10,7 @@ namespace Audit_Mvc_Core.Repository
         {
             _context = context;
         }
-        //public async Task<Admin> GetAdmin()
-        //{
-        //    if (_context != null)
-        //    {
-        //        return await _context.Admins.ToListAsync();
-        //    }
-        //    return null;
-        //}
+       
 
         public async Task<Admin> AuthenticateAdminLog(string username,string password)
         {
